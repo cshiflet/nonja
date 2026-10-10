@@ -21,13 +21,7 @@ export default async function Page({ params }: PageProps) {
     <>
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
         <div className="flex items-center gap-2.5">
-          <Image
-            alt=""
-            className="rounded-[24%]"
-            height={26}
-            src="/icon.png"
-            width={26}
-          />
+          <Image alt="" className="rounded-[24%]" height={26} src="/icon.png" width={26} />
           <span className="font-bold text-sm tracking-tight">Nonja</span>
         </div>
         <LanguageSwitch />
@@ -48,9 +42,7 @@ export default async function Page({ params }: PageProps) {
           <h1 className="mt-7 text-balance font-display font-bold text-3xl leading-[1.4] tracking-tight sm:text-4xl">
             {t("hero.title")}
           </h1>
-          <p className="mt-6 max-w-md text-ink-2 leading-relaxed">
-            {t("hero.tagline")}
-          </p>
+          <p className="mt-6 max-w-md text-ink-2 leading-relaxed">{t("hero.tagline")}</p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a
@@ -95,18 +87,12 @@ export default async function Page({ params }: PageProps) {
 
       <section className="border-line border-t">
         <div className="mx-auto max-w-6xl px-6 py-16">
-          <h2 className="text-ink-3 text-xs tracking-wider">
-            {t("features.title")}
-          </h2>
+          <h2 className="text-ink-3 text-xs tracking-wider">{t("features.title")}</h2>
           <dl className="mt-8 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((item) => (
               <div key={item.title}>
-                <dt className="font-display font-bold text-base">
-                  {item.title}
-                </dt>
-                <dd className="mt-2.5 text-ink-2 text-sm leading-relaxed">
-                  {item.body}
-                </dd>
+                <dt className="font-display font-bold text-base">{item.title}</dt>
+                <dd className="mt-2.5 text-ink-2 text-sm leading-relaxed">{item.body}</dd>
               </div>
             ))}
           </dl>
@@ -121,6 +107,10 @@ export default async function Page({ params }: PageProps) {
         <Link className="underline" href="/privacy">
           {t("footer.privacy")}
         </Link>
+        <span className="px-2">·</span>
+        <a className="underline" href="https://buymeacoffee.com/piro0919">
+          Buy Me a Coffee
+        </a>
       </footer>
     </>
   );
